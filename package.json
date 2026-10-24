@@ -1,5 +1,5 @@
 {
-  "name": "@red-cup-engineering/holozing-engineering-services-section",
+  "name": "@red-cup-engineering/holozing-services-section",
   "version": "0.1.2",
   "type": "module",
   "description": "Read-only HoloZing pending-reward observation and pure stake-only reward-claim planning; never opens, transfers, or mutates an Alpha Vial NFT.",
