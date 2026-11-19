@@ -141,13 +141,13 @@ export function keychainLoginEnvelope(account, message, signature, publicKey) {
  * `recorder` is caller-supplied (network/disk I/O lives with the caller,
  * never in this module); a recorder failure never sets retryAllowed back to
  * true, because the claim has already happened by the time this runs. */
-export async function attachHolozingDurableRecord(receipt, recorder) {
+export async function attachHolozingDurableRecord(record, recorder) {
   try {
-    const event = await recorder(receipt);
-    return Object.freeze({ ...receipt, durableRecord: Object.freeze({ confirmed: true, eventId: event.eventId }) });
+    const event = await recorder(record);
+    return Object.freeze({ ...record, durableRecord: Object.freeze({ confirmed: true, eventId: event.eventId }) });
   } catch (error) {
     return Object.freeze({
-      ...receipt,
+      ...record,
       retryAllowed: false,
       durableRecord: Object.freeze({ confirmed: false, error: error instanceof Error ? error.message : String(error) }),
     });
