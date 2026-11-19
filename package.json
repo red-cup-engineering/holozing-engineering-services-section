@@ -1,0 +1,42 @@
+{
+  "name": "@red-cup-engineering/holozing-engineering-services-section",
+  "version": "0.1.4-dev.0",
+  "type": "module",
+  "description": "Read-only HoloZing pending-reward observation and pure stake-only reward-claim planning; never opens, transfers, or mutates an Alpha Vial NFT.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/red-cup-engineering/holozing-engineering-services-section.git"
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "check": "for f in src/*.mjs; do node --check \"$f\" || exit 1; done"
+  },
+  "exports": {
+    ".": "./src/rewards.mjs",
+    "./rewards": {
+      "default": "./src/rewards.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "hive",
+    "hive-engine",
+    "holozing",
+    "sovereign-state-enterprise"
+  ],
+  "private": false,
+  "files": [
+    "package.json",
+    "README*",
+    "LICENSE*",
+    "src"
+  ],
+  "license": "MIT",
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/561-group/.github/blob/main/TIPS.md"
+  }
+}
