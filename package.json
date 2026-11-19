@@ -7,12 +7,6 @@
     "type": "git",
     "url": "git+https://github.com/red-cup-engineering/holozing-engineering-services-section.git"
   },
-  "engines": {
-    "node": ">=22.18"
-  },
-  "scripts": {
-    "check": "for f in src/*.mjs; do node --check \"$f\" || exit 1; done"
-  },
   "exports": {
     ".": "./src/rewards.mjs",
     "./rewards": {
@@ -20,23 +14,11 @@
     },
     "./package.json": "./package.json"
   },
-  "sideEffects": false,
-  "keywords": [
-    "hive",
-    "hive-engine",
-    "holozing",
-    "sovereign-state-enterprise"
-  ],
-  "private": false,
   "files": [
     "package.json",
     "README*",
     "LICENSE*",
     "src"
   ],
-  "license": "MIT",
-  "funding": {
-    "type": "individual",
-    "url": "https://github.com/561-group/.github/blob/main/TIPS.md"
-  }
+  "license": "MIT"
 }
